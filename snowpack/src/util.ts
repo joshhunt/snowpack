@@ -19,6 +19,8 @@ import {SkypackSDK} from 'skypack';
 // importing other relative files inside of it is likely to introduce broken
 // circular dependencies (sometimes only visible in the final bundled build.)
 
+export const IS_DOTFILE_REGEX = new RegExp(`\\${path.sep}\\..+`);
+
 export const GLOBAL_CACHE_DIR = globalCacheDir('snowpack');
 export const LOCKFILE_NAME = 'snowpack.deps.json';
 
